@@ -1,0 +1,16 @@
+# Core dependencies
+numpy==1.26.4
+Pillow==10.4.0
+pydantic==2.10.5
+
+# Video generation
+opencv-python==4.10.0.84
+
+# Tower of Hanoi task dependencies
+matplotlib==3.8.0  # For Tower of Hanoi visualization
+
+# Optional dependencies for other tasks:
+# python-chess==1.999  # For chess tasks
+# cairosvg==2.7.1  # For high-quality SVG rendering
+# networkx==3.0  # For graph-based tasks
+# scipy==1.11.0  # For scientific computing
