@@ -44,17 +44,17 @@ class TaskConfig(GenerationConfig):
     )
     
     video_fps: int = Field(
-        default=10,
-        description="Video frame rate"
+        default=24,
+        description="Video frame rate (higher = smoother but longer videos)"
     )
 
     hold_frames: int = Field(
-        default=2,
+        default=1,
         description="Frames to hold at the start/end of the video and between moves (lower = faster/smaller videos)"
     )
 
     transition_frames: int = Field(
-        default=8,
+        default=6,
         description="Frames for each disk movement transition (lower = faster/smaller videos)"
     )
 

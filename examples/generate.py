@@ -65,6 +65,27 @@ Examples:
         help="Disable video generation"
     )
     
+    parser.add_argument(
+        "--video-fps",
+        type=int,
+        default=24,
+        help="Video frame rate (default: 24)"
+    )
+    
+    parser.add_argument(
+        "--hold-frames",
+        type=int,
+        default=1,
+        help="Frames to hold at start/end and between moves (default: 1)"
+    )
+    
+    parser.add_argument(
+        "--transition-frames",
+        type=int,
+        default=6,
+        help="Frames for each disk movement transition (default: 6)"
+    )
+    
     args = parser.parse_args()
     
     print(f"🎲 Generating {args.num_samples} tasks...")
@@ -80,6 +101,9 @@ Examples:
         random_seed=args.seed,
         output_dir=Path(args.output),
         generate_videos=not args.no_videos,
+        video_fps=args.video_fps,
+        hold_frames=args.hold_frames,
+        transition_frames=args.transition_frames,
     )
     
     # Generate tasks
